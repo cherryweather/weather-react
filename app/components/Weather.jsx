@@ -31,14 +31,14 @@ var Weather = React.createClass({
 
     function renderMessage() {
       if (isLoading) {
-        return <h3>Fetching weather...</h3>;
+        return <h3 className="text-center">Fetching weather...</h3>;
       } else if (temp && location) {
         return <WeatherMessage location={location} temp={temp}/>;
       }
     }
     return (
       <div>
-        <h4>Weather component</h4>
+        <h1 className="text-center">Weather component</h1>
         <WeatherForm onSearchRequest={this.handleSearch}/>
         {renderMessage()}
       </div>
